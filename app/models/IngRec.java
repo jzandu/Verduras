@@ -9,10 +9,7 @@ import javax.persistence.ManyToOne;
 @Entity
 public class IngRec extends Model {
 
-    private String nombre;
-    //private String recetaI;
     private int cantidad;
-
     @ManyToOne
     private Ingrediente listadoing;
     @ManyToOne
