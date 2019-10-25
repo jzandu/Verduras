@@ -8,16 +8,22 @@ import javax.persistence.*;
 
 
 @Entity
-@Table(name = "LIBRO RECETAS")
 public class Receta extends Model {
     private String nombre;
     @Lob
     private String texto;
 
-    @ManyToMany
-    List<Ingrediente> ingredientes = new ArrayList<Ingrediente>();
+    @OneToMany(mappedBy = "recetario")
+    private List<IngRec> ingredienteporreceta;
+
 
     public Receta() {
+        Receta r  = null;
+    }
+
+    public Receta(String nom, String text){
+        this.setNombre(nom);
+        this.setTexto(text);
     }
 
     public String getNombre() {

@@ -3,7 +3,7 @@ package models;
 import play.db.jpa.Model;
 
 import javax.persistence.Entity;
-import javax.persistence.ManyToMany;
+import javax.persistence.OneToMany;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -11,16 +11,17 @@ import java.util.List;
 public class Ingrediente extends Model {
     private String nom;
 
-    @ManyToMany(mappedBy = "recetas")
-    List<Receta> recetas = new ArrayList<Receta>();
+    @OneToMany(mappedBy = "listadoing")
+    private List<IngRec> ingredienteporreceta;
 
-    public Ingrediente(String n) {
-        this.nom = n;
-    }
 
     public Ingrediente() {
         nom = null;
     }//NO termino de entender esto, se podría quitar (en este caso)
+
+    public Ingrediente(String n) {
+        this.setNom(n);
+    }
 
     public String getNom() {
         return nom;
