@@ -13,13 +13,13 @@ public class Application extends Controller{
         render();
     }
     public static void inicializarBD(){
-        Ingrediente uno1 = new Ingrediente("Pimiento Verde").save();
+        addIngrediente("Pimiento Verde");
         Ingrediente dos2 = new Ingrediente("Lentejas pardina").save();
 
         Receta rec1 = new Receta("Lentejas a la aragonesa", "Cocer las lentejas").save();
         Receta rec2 = new Receta("Piperrada", "Cortar los pimientos").save();
 
-
+        IngRec relacio1 = null;
 
 
     }
@@ -40,8 +40,8 @@ public class Application extends Controller{
 
     }
 
-    public void addIngrediente(){
-
+    public static Ingrediente addIngrediente(String nombre){
+        return new Ingrediente(nombre).save();
     }
 
     public void addReceta(){

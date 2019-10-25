@@ -31,4 +31,9 @@ public class Ingrediente extends Model {
         this.nom = n;
     }
 
+    public static void addIngrediente(String nombre){
+        Ingrediente n = new Ingrediente(nombre).save();
+
+    }
+
 }

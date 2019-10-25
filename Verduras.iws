@@ -2,14 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="74c89310-bde5-4fc7-8ec7-4bf9b4414c76" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Verduras.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Verduras.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Verduras.ipr" beforeDir="false" afterPath="$PROJECT_DIR$/Verduras.ipr" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Verduras.iws" beforeDir="false" afterPath="$PROJECT_DIR$/Verduras.iws" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/controllers/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/Application.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/models/Ingrediente.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/Ingrediente.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/LibroRecetas.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/IngRec.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/Receta.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/Receta.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/main.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tmp/bytecode/DEV/models.Ingrediente" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/bytecode/DEV/models.Ingrediente" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tmp/classes/models/Ingrediente.class" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/classes/models/Ingrediente.class" afterDir="false" />
     </list>
@@ -73,7 +68,7 @@
       <option name="presentableId" value="Default" />
       <updated>1571255598375</updated>
       <workItem from="1571255611090" duration="4569000" />
-      <workItem from="1572016481811" duration="4482000" />
+      <workItem from="1572016481811" duration="5800000" />
     </task>
     <task id="LOCAL-00001" summary="Borrada interfaz">
       <created>1572017310616</created>
@@ -89,7 +84,14 @@
       <option name="project" value="LOCAL" />
       <updated>1572017390607</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Creado las relaciones OneToMany y ManyTone">
+      <created>1572021272957</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1572021272957</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -108,6 +110,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Borrada interfaz" />
-    <option name="LAST_COMMIT_MESSAGE" value="Borrada interfaz" />
+    <MESSAGE value="Creado las relaciones OneToMany y ManyTone" />
+    <option name="LAST_COMMIT_MESSAGE" value="Creado las relaciones OneToMany y ManyTone" />
   </component>
 </project>
