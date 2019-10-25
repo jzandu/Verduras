@@ -13,13 +13,14 @@ public class Application extends Controller{
         render();
     }
     public static void inicializarBD(){
+
         addIngrediente("Pimiento Verde");
         Ingrediente dos2 = new Ingrediente("Lentejas pardina").save();
 
         Receta rec1 = new Receta("Lentejas a la aragonesa", "Cocer las lentejas").save();
         Receta rec2 = new Receta("Piperrada", "Cortar los pimientos").save();
 
-        IngRec relacio1 = null;
+        IngRec relacio1 = new IngRec(dos2,200,rec1).save();
 
 
     }

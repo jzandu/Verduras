@@ -4,9 +4,7 @@
     <list default="true" id="74c89310-bde5-4fc7-8ec7-4bf9b4414c76" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/Verduras.iws" beforeDir="false" afterPath="$PROJECT_DIR$/Verduras.iws" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/controllers/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/Application.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/Ingrediente.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/Ingrediente.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/bytecode/DEV/models.Ingrediente" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/bytecode/DEV/models.Ingrediente" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/classes/models/Ingrediente.class" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/classes/models/Ingrediente.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/IngRec.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/IngRec.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -68,7 +66,8 @@
       <option name="presentableId" value="Default" />
       <updated>1571255598375</updated>
       <workItem from="1571255611090" duration="4569000" />
-      <workItem from="1572016481811" duration="5800000" />
+      <workItem from="1572016481811" duration="5927000" />
+      <workItem from="1572023585570" duration="932000" />
     </task>
     <task id="LOCAL-00001" summary="Borrada interfaz">
       <created>1572017310616</created>
@@ -91,7 +90,14 @@
       <option name="project" value="LOCAL" />
       <updated>1572021272957</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Cambiado la creacion de ingredientes">
+      <created>1572022540641</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1572022540641</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -102,7 +108,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
@@ -111,6 +119,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Borrada interfaz" />
     <MESSAGE value="Creado las relaciones OneToMany y ManyTone" />
-    <option name="LAST_COMMIT_MESSAGE" value="Creado las relaciones OneToMany y ManyTone" />
+    <MESSAGE value="Cambiado la creacion de ingredientes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Cambiado la creacion de ingredientes" />
   </component>
 </project>
