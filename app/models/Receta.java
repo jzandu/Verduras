@@ -1,6 +1,6 @@
 package models;
 import play.db.jpa.Model;
-import java.util.ArrayList;
+
 import java.util.List;
 
 import javax.persistence.*;
@@ -9,12 +9,13 @@ import javax.persistence.*;
 
 @Entity
 public class Receta extends Model {
-    private String nombre;
+    public String nombreReceta;
+
     @Lob
-    private String texto;
+    public String textoReceta;
 
     @OneToMany(mappedBy = "recetario")
-    private List<IngRec> ingredienteporreceta;
+    public List<IngRec> ingredienteporreceta;
 
 
     public Receta() {
@@ -22,22 +23,34 @@ public class Receta extends Model {
     }
 
     public Receta(String nom, String text){
-        this.setNombre(nom);
-        this.setTexto(text);
+        this.setNombreReceta(nom);
+        this.setTextoReceta(text);
+
     }
 
-    public String getNombre() {
-        return nombre;
+    public Receta(String nombreReceta){
+        this.setNombreReceta(nombreReceta);
     }
 
-    public void setNombre(String n) {
-        this.nombre = n;
+    public void actualizarReceta(String nombreReceta, String textoReceta){
+        Receta rc = Receta.find("byNombreReceta",nombreReceta).first();
+        rc.delete();
+        rc = new Receta(rc.nombreReceta, textoReceta).save();
     }
-    public String getTexto(){
-        return texto;
+
+    public String getNombreReceta() {
+        return nombreReceta;
     }
-    public  void setTexto(String rec) {
-        this.texto=rec;
+
+    public void setNombreReceta(String n) {
+        this.nombreReceta = n;
     }
+    public String getTextoReceta(){
+        return textoReceta;
+    }
+    public  void setTextoReceta(String rec) {
+        this.textoReceta =rec;
+    }
+
 
 }

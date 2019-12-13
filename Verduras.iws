@@ -2,9 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="74c89310-bde5-4fc7-8ec7-4bf9b4414c76" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/Verduras.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Verduras.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Verduras.ipr" beforeDir="false" afterPath="$PROJECT_DIR$/Verduras.ipr" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Verduras.iws" beforeDir="false" afterPath="$PROJECT_DIR$/Verduras.iws" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/controllers/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/Application.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/models/IngRec.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/IngRec.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/Ingrediente.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/Ingrediente.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/Receta.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/Receta.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/Application/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/Application/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/dependencies.yml" beforeDir="false" afterPath="$PROJECT_DIR$/conf/dependencies.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/routes" beforeDir="false" afterPath="$PROJECT_DIR$/conf/routes" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/docviewer" beforeDir="false" afterPath="$PROJECT_DIR$/modules/docviewer" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/bytecode/DEV/models.Ingrediente" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/bytecode/DEV/models.Ingrediente" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/classes/models/Ingrediente.class" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/classes/models/Ingrediente.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/classes/production/Verduras/views/Application/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/classes/production/Verduras/views/Application/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/classes/production/Verduras/views/PlayDocumentation/cheatSheet.html" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/classes/production/Verduras/views/PlayDocumentation/cheatSheet.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/classes/production/Verduras/views/PlayDocumentation/page.html" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/classes/production/Verduras/views/PlayDocumentation/page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/classes/production/Verduras/views/PlayDocumentation/releases.html" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/classes/production/Verduras/views/PlayDocumentation/releases.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/classes/production/Verduras/views/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/classes/production/Verduras/views/main.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -24,6 +39,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="UPDATE_TYPE" value="MERGE" />
   </component>
@@ -37,11 +57,22 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Documents/Proyecto Verduras/Verduras2" />
     <property name="project.structure.last.edited" value="Facets" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.5013889" />
     <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="controllers" />
+      <recent name="models" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Joseph\IdeaProjects\Verduras\app" />
+      <recent name="C:\Users\Joseph\IdeaProjects\Verduras\app\views\Application" />
+      <recent name="C:\Users\Joseph\IdeaProjects\Verduras\modules" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -68,6 +99,16 @@
       <workItem from="1571255611090" duration="4569000" />
       <workItem from="1572016481811" duration="5927000" />
       <workItem from="1572023585570" duration="932000" />
+      <workItem from="1574073201292" duration="1654000" />
+      <workItem from="1574248646111" duration="63000" />
+      <workItem from="1574352445963" duration="831000" />
+      <workItem from="1574353341553" duration="7088000" />
+      <workItem from="1574671857363" duration="13013000" />
+      <workItem from="1575275751358" duration="2148000" />
+      <workItem from="1575278547207" duration="729000" />
+      <workItem from="1576142217886" duration="479000" />
+      <workItem from="1576143860546" duration="2090000" />
+      <workItem from="1576232568126" duration="295000" />
     </task>
     <task id="LOCAL-00001" summary="Borrada interfaz">
       <created>1572017310616</created>

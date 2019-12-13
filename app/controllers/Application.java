@@ -1,22 +1,18 @@
 package controllers;
 
-import play.*;
 import play.mvc.*;
-
-import java.util.*;
-
 import models.*;
 
 public class Application extends Controller{
     public static void index() {
         inicializarBD();
-        render();
+        renderTemplate("Application/addIngredienteTemplate.html");
     }
     public static void inicializarBD(){
 
-        addIngrediente("Pimiento Verde");
+        //addIngredienteTemplate("Pimiento verde", 2, "Piperrada");
         Ingrediente dos2 = new Ingrediente("Lentejas pardina").save();
-
+        dos2 = new Ingrediente("Lenteja pardina").save();
         Receta rec1 = new Receta("Lentejas a la aragonesa", "Cocer las lentejas").save();
         Receta rec2 = new Receta("Piperrada", "Cortar los pimientos").save();
 
@@ -41,12 +37,29 @@ public class Application extends Controller{
 
     }
 
-    public static Ingrediente addIngrediente(String nombre){
-        return new Ingrediente(nombre).save();
+
+    //Metodo relacionado con el formulario HTML
+    public static void addIngredienteTemplate(String nuevoIngrediente, int nuevaCantidad, String nuevaReceta){
+        Ingrediente ni = Ingrediente.find("byNombreIngrediente", nuevoIngrediente).first();
+        if (ni == null) {
+            ni = new Ingrediente(nuevoIngrediente).save();
+        }
+            Receta nc = new Receta(nuevaReceta, null).save();
+            IngRec ic = new IngRec(ni, nuevaCantidad, nc).save();
+        }
+
+    public static void addRecetaTemplate(String nombreReceta, String textoReceta){
+        Receta rc = Receta.find("byNombreReceta",nombreReceta).first();
+        if (rc.getTextoReceta() == null) {
+            rc.actualizarReceta(nombreReceta, textoReceta);
+        } else renderText("Ingrediente añadido");
     }
 
-    public void addReceta(){
+    /*Metodo para añadir un ingrediente a la clase ingrediente
+    public static void addIngrediente(String nuevoIngrediente) {
 
+        } else renderText("Ingrediente ya añadido.");*/
     }
 
-}
+
+

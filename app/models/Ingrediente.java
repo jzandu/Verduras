@@ -1,39 +1,44 @@
 package models;
 
+import play.data.validation.Required;
 import play.db.jpa.Model;
 
 import javax.persistence.Entity;
 import javax.persistence.OneToMany;
-import java.util.ArrayList;
 import java.util.List;
 
 @Entity
 public class Ingrediente extends Model {
-    private String nom;
 
-    @OneToMany(mappedBy = "listadoing")
-    private List<IngRec> ingredienteporreceta;
+    @NombreIngrediente
+    @Required
+    public String nombreIngrediente;
 
+    /*@OneToMany(mappedBy = "listadoing")
+    public List<IngRec> ingredientePorReceta;
+*/
 
     public Ingrediente() {
-        nom = null;
+        nombreIngrediente = null;
     }//NO termino de entender esto, se podría quitar (en este caso)
 
     public Ingrediente(String n) {
-        this.setNom(n);
+        this.setNombreIngrediente(n);
     }
 
-    public String getNom() {
-        return nom;
+    public String getNombreIngrediente() {
+        return nombreIngrediente;
     }
 
-    public void setNom(String n) {
-        this.nom = n;
+    public void setNombreIngrediente(String n) {
+        this.nombreIngrediente = n;
     }
 
-    public static void addIngrediente(String nombre){
+    /*public static void addReceta(String nombre){
         Ingrediente n = new Ingrediente(nombre).save();
 
+    }*/
+
+
     }
 
-}

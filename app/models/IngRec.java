@@ -9,19 +9,21 @@ import javax.persistence.ManyToOne;
 @Entity
 public class IngRec extends Model {
 
-    private int cantidad;
+    public int cantidad;
     @ManyToOne
-    private Ingrediente listadoing;
+    public Ingrediente listadoing;
     @ManyToOne
-    private Receta recetario;
+    public Receta recetario;
+    @ManyToOne
+    public Client guardadoFav;
 
     public IngRec(){
         IngRec ir = null;
     }
 
-    public IngRec(Ingrediente listadoing, int c, Receta recetario){
+    public IngRec(Ingrediente listadoing, int cantidadPorReceta, Receta recetario){
         this.listadoing=listadoing;
-        this.setCantidad(c);
+        this.setCantidad(cantidadPorReceta);
         this.recetario=recetario;
     }
 
@@ -32,4 +34,11 @@ public class IngRec extends Model {
     public int getCantidad() {
         return cantidad;
     }
-}
+
+    public String toString(){
+        return "[Receta: "+ this.recetario.getNombreReceta();
+    }
+
+
+
+    }
