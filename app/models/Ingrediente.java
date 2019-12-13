@@ -4,35 +4,36 @@ import play.db.jpa.Model;
 
 import javax.persistence.Entity;
 import javax.persistence.OneToMany;
-import java.util.ArrayList;
 import java.util.List;
 
 @Entity
 public class Ingrediente extends Model {
-    private String nom;
+    private String nombre;
 
     @OneToMany(mappedBy = "listadoing")
     private List<IngRec> ingredienteporreceta;
 
 
     public Ingrediente() {
-        nom = null;
+        nombre = null;
     }//NO termino de entender esto, se podría quitar (en este caso)
 
     public Ingrediente(String n) {
-        this.nom=n;
+        this.nombre =n;
     }
 
-    public String getNom() {
-        return nom;
+    public String getNombre() {
+        return nombre;
     }
 
-    public void setNom(String n) {
-        this.nom = n;
+    public void setNombre(String n) {
+        this.nombre = n;
     }
 
     /*public static void addIngrediente(String nombre){
         Ingrediente n = new Ingrediente(nombre).save();
 
     }*/
+
+
 }

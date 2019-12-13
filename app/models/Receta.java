@@ -9,6 +9,7 @@ import javax.persistence.*;
 
 @Entity
 public class Receta extends Model {
+
     private String nombre;
     @Lob
     private String texto;

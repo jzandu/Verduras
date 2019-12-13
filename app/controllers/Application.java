@@ -6,11 +6,18 @@ import play.mvc.*;
 import java.util.*;
 import views.*;
 import models.*;
+import javax.persistence.*;
+import play.db.jpa.*;
+
 
 public class Application extends Controller{
     public void index() {
-        inicializarBD();
-        renderText("ASi funciona")
+        //inicializarBD();
+
+        String h1 = "select nombre from Ingrediente";
+        Query query1 = JPA.em().createQuery(h1);
+        List<String> listatodos = query1.getResultList();
+        renderJSON(listatodos);
     }
     public void inicializarBD(){
 
@@ -24,7 +31,8 @@ public class Application extends Controller{
         Receta rec2 = new Receta("Piperrada", "Cortar los pimientos").save();
 
         IngRec relacio1 = new IngRec(dos2,200,rec1).save();
-
+        Receta r1 = Receta.find("byNombre", "Piperrada").first();
+        renderJSON(r1);
 
     }
 
@@ -50,7 +58,7 @@ public class Application extends Controller{
     }*/
 
     public void addIngrediente(String nombre){
-        Ingrediente ni = Ingrediente.find("byNom", nombre).first();
+        Ingrediente ni = Ingrediente.find("byNombre", nombre).first();
         if (ni == null) {
             ni = new Ingrediente(nombre);
             ni.save();
