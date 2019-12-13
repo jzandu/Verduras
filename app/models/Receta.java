@@ -40,5 +40,4 @@ public class Receta extends Model {
     public  void setTexto(String rec) {
         this.texto=rec;
     }
-
 }

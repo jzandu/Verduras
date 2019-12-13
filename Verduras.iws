@@ -2,13 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="74c89310-bde5-4fc7-8ec7-4bf9b4414c76" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Verduras.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Verduras.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Verduras.ipr" beforeDir="false" afterPath="$PROJECT_DIR$/Verduras.ipr" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Verduras.iws" beforeDir="false" afterPath="$PROJECT_DIR$/Verduras.iws" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/controllers/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/Application.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/models/Ingrediente.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/Ingrediente.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/models/Receta.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/Receta.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/docviewer" beforeDir="false" afterPath="$PROJECT_DIR$/modules/docviewer" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tmp/bytecode/DEV/models.Ingrediente" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/bytecode/DEV/models.Ingrediente" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tmp/classes/models/Ingrediente.class" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/classes/models/Ingrediente.class" afterDir="false" />
     </list>
@@ -44,7 +41,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Documentos/PES/JSonFilesExamples" />
     <property name="project.structure.last.edited" value="Facets" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.5013889" />
@@ -118,7 +115,14 @@
       <option name="project" value="LOCAL" />
       <updated>1576238917284</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Actualizado para hacer consultas y ver en forma de JSON">
+      <created>1576244108512</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1576244108512</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -143,29 +147,42 @@
     <MESSAGE value="Cambiado la creacion de ingredientes" />
     <MESSAGE value="Modificado" />
     <MESSAGE value="La forma en que puedo hacer que vuelva de la funcion es poniendo todos los metdos como no estáticos y lueg render text" />
-    <option name="LAST_COMMIT_MESSAGE" value="La forma en que puedo hacer que vuelva de la funcion es poniendo todos los metdos como no estáticos y lueg render text" />
+    <MESSAGE value="Actualizado para hacer consultas y ver en forma de JSON" />
+    <option name="LAST_COMMIT_MESSAGE" value="Actualizado para hacer consultas y ver en forma de JSON" />
   </component>
   <component name="WindowStateProjectService">
     <state x="726" y="310" width="524" height="484" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog" timestamp="1576241787615">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="726" y="310" width="524" height="484" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1576241787615" />
+    <state x="801" y="239" width="374" height="626" key="#com.intellij.ide.util.MemberChooser" timestamp="1576252681407">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="801" y="239" width="374" height="626" key="#com.intellij.ide.util.MemberChooser/67.27.1853.1053@67.27.1853.1053" timestamp="1576252681407" />
     <state x="834" y="444" width="308" height="216" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1576237853630">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="834" y="444" width="308" height="216" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1576237853630" />
-    <state x="558" y="149" width="860" height="807" key="CommitChangelistDialog2" timestamp="1576238917200">
+    <state x="558" y="149" width="860" height="807" key="CommitChangelistDialog2" timestamp="1576244108181">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="558" y="149" width="860" height="807" key="CommitChangelistDialog2/67.27.1853.1053@67.27.1853.1053" timestamp="1576238917200" />
+    <state x="558" y="149" width="860" height="807" key="CommitChangelistDialog2/67.27.1853.1053@67.27.1853.1053" timestamp="1576244108181" />
     <state x="243" y="116" width="1482" height="872" key="DiffContextDialog" timestamp="1576237966262">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="243" y="116" width="1482" height="872" key="DiffContextDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1576237966262" />
-    <state x="588" y="288" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1576238919897">
+    <state x="776" y="310" width="424" height="484" key="FileChooserDialogImpl" timestamp="1576252310373">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="588" y="288" width="800" height="528" key="Vcs.Push.Dialog.v2/67.27.1853.1053@67.27.1853.1053" timestamp="1576238919897" />
+    <state x="776" y="310" width="424" height="484" key="FileChooserDialogImpl/67.27.1853.1053@67.27.1853.1053" timestamp="1576252310373" />
+    <state x="482" y="187" key="SettingsEditor" timestamp="1576254165307">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="482" y="187" key="SettingsEditor/67.27.1853.1053@67.27.1853.1053" timestamp="1576254165307" />
+    <state x="588" y="288" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1576251719656">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="588" y="288" width="800" height="528" key="Vcs.Push.Dialog.v2/67.27.1853.1053@67.27.1853.1053" timestamp="1576251719656" />
     <state x="167" y="125" width="1653" height="855" key="com.intellij.dvcs.ui.CompareBranchesDialog" timestamp="1576237894180">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>

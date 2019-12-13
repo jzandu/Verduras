@@ -9,6 +9,9 @@ import java.util.List;
 @Entity
 public class Ingrediente extends Model {
     private String nombre;
+    private String tipo;
+    //private boolean vegetariano;
+
 
     @OneToMany(mappedBy = "listadoing")
     private List<IngRec> ingredienteporreceta;
@@ -18,8 +21,14 @@ public class Ingrediente extends Model {
         nombre = null;
     }//NO termino de entender esto, se podría quitar (en este caso)
 
-    public Ingrediente(String n) {
-        this.nombre =n;
+    public Ingrediente(String nombre, String tipo) {
+        this.nombre =nombre;
+        this.tipo=tipo;
+        /*if(tipo=="Hortaliza"){
+            vegetariano=true;
+        }else if(tipo=="Cereal"){
+            vegetariano =true;
+        }else vegetariano=false;*/
     }
 
     public String getNombre() {
@@ -30,10 +39,13 @@ public class Ingrediente extends Model {
         this.nombre = n;
     }
 
-    /*public static void addIngrediente(String nombre){
-        Ingrediente n = new Ingrediente(nombre).save();
+    public String getTipo() {
+        return tipo;
+    }
 
-    }*/
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
+    }
 
 
 }

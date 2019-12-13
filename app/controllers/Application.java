@@ -12,19 +12,21 @@ import play.db.jpa.*;
 
 public class Application extends Controller{
     public void index() {
-        //inicializarBD();
-
         String h1 = "select nombre from Ingrediente";
         Query query1 = JPA.em().createQuery(h1);
         List<String> listatodos = query1.getResultList();
         renderJSON(listatodos);
     }
-    public void inicializarBD(){
 
-        Ingrediente dos2 = new Ingrediente("Lentejas pardina").save();
-        dos2 = new Ingrediente("Pimiento verde").save();
-        //addIngrediente("Pimkiento Verde");
+
+    public void idb(){
+        Ingrediente dos2 = new Ingrediente("Lentejas pardina", "Legumbre").save();
+        dos2= new Ingrediente("Patatas", "Hortaliza").save();
+        dos2= new Ingrediente("Tomates", "Hortaliza").save();
+        dos2 = new Ingrediente("Filete de ternera" ,"Carne").save();
+        dos2 = new Ingrediente("Pimiento verde", "Hortaliza").save();
         addIngrediente("Pimiento verde");
+
 
 
         Receta rec1 = new Receta("Lentejas a la aragonesa", "Cocer las lentejas").save();
@@ -60,7 +62,7 @@ public class Application extends Controller{
     public void addIngrediente(String nombre){
         Ingrediente ni = Ingrediente.find("byNombre", nombre).first();
         if (ni == null) {
-            ni = new Ingrediente(nombre);
+            ni = new Ingrediente(nombre, "j");
             ni.save();
         }
 
