@@ -10,7 +10,7 @@ import java.util.List;
 public class Ingrediente extends Model {
     private String nombre;
     private String tipo;
-    //private boolean vegetariano;
+    private boolean vegetariano;
 
 
     @OneToMany(mappedBy = "listadoing")
@@ -24,11 +24,11 @@ public class Ingrediente extends Model {
     public Ingrediente(String nombre, String tipo) {
         this.nombre =nombre;
         this.tipo=tipo;
-        /*if(tipo=="Hortaliza"){
+        if(tipo=="Hortaliza"){
             vegetariano=true;
         }else if(tipo=="Cereal"){
             vegetariano =true;
-        }else vegetariano=false;*/
+        }else vegetariano=false;
     }
 
     public String getNombre() {

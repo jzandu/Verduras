@@ -25,7 +25,9 @@ public class Application extends Controller{
         dos2= new Ingrediente("Tomates", "Hortaliza").save();
         dos2 = new Ingrediente("Filete de ternera" ,"Carne").save();
         dos2 = new Ingrediente("Pimiento verde", "Hortaliza").save();
-        addIngrediente("Pimiento verde");
+        addIngrediente("Pimiento verde", "Hortaliza");
+        addIngrediente("Pimiento rojo", "Hortaliza");
+
 
 
 
@@ -59,10 +61,10 @@ public class Application extends Controller{
         return new Ingrediente(nombre).save();
     }*/
 
-    public void addIngrediente(String nombre){
+    public void addIngrediente(String nombre,String tipo){
         Ingrediente ni = Ingrediente.find("byNombre", nombre).first();
         if (ni == null) {
-            ni = new Ingrediente(nombre, "j");
+            ni = new Ingrediente(nombre,tipo);
             ni.save();
         }
 
