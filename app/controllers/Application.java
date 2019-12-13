@@ -54,10 +54,17 @@ public class Application extends Controller{
      dame los nombres de ingrediente de...tengo que conseguir el id antes y eso está en la base de datos no en java*/
     public void verIngredientes(String nombreReceta) {
         Receta receta = Receta.find("byNombre", nombreReceta).first();
-        receta = Receta.find("byId", receta).fetch();
-        Query query1 = JPA.em().createQuery("select listadoing_id from IngRec where recetario_id = "+receta.ge);
-        List<String> listatodos = query1.getResultList();
+
+        Query query1 = JPA.em().createQuery("select listadoing from IngRec where recetario = "+u);
+        List<Ingrediente> listatodos = query1.getResultList();
         renderJSON(listatodos);
+
+        //Ingrediente lp = IngRec.find("byId",receta.getId()).fetch();
+        //renderJSON(lp);
+        //Query query2 = JPA.em().creatyQuery("select id from receta where nombre="+nombreReceta);
+
+
+
         //OPCIONES POR ORDEN DE DIFICULTAD
         // 1 Ves una receta y te muestra sus ingredientes
         // 2 Busca las recetas que contienen un ingrediente

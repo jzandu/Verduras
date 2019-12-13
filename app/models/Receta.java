@@ -11,7 +11,7 @@ import javax.persistence.criteria.CriteriaBuilder;
 @Entity
 public class Receta extends Model {
     final static Logger log = Logger.getLogger(Receta.class.getName());
-
+    @
     private String nombre;
     @Lob
     private String texto;
