@@ -2,11 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="74c89310-bde5-4fc7-8ec7-4bf9b4414c76" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/Verduras.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Verduras.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Verduras.ipr" beforeDir="false" afterPath="$PROJECT_DIR$/Verduras.ipr" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Verduras.iws" beforeDir="false" afterPath="$PROJECT_DIR$/Verduras.iws" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/controllers/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/Application.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/IngRec.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/IngRec.java" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -43,15 +43,15 @@
     <property name="project.structure.side.proportion" value="0.5013889" />
     <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
+  <component name="ServiceViewManager">
+    <option name="viewStates">
       <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
       </list>
     </option>
   </component>
@@ -121,5 +121,27 @@
     <MESSAGE value="Creado las relaciones OneToMany y ManyTone" />
     <MESSAGE value="Cambiado la creacion de ingredientes" />
     <option name="LAST_COMMIT_MESSAGE" value="Cambiado la creacion de ingredientes" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="834" y="444" width="308" height="216" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1576237853630">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="834" y="444" width="308" height="216" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1576237853630" />
+    <state x="243" y="116" width="1482" height="872" key="DiffContextDialog" timestamp="1576237966262">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="243" y="116" width="1482" height="872" key="DiffContextDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1576237966262" />
+    <state x="167" y="125" width="1653" height="855" key="com.intellij.dvcs.ui.CompareBranchesDialog" timestamp="1576237894180">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="167" y="125" width="1653" height="855" key="com.intellij.dvcs.ui.CompareBranchesDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1576237894180" />
+    <state x="761" y="472" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1576237971236">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="761" y="472" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/67.27.1853.1053@67.27.1853.1053" timestamp="1576237971236" />
+    <state x="594" y="402" width="788" height="300" key="git4idea.ui.GitUnstashDialog" timestamp="1576237943489">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="594" y="402" width="788" height="300" key="git4idea.ui.GitUnstashDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1576237943489" />
   </component>
 </project>
