@@ -19,7 +19,7 @@ public class IngRec extends Model {
         IngRec ir = null;
     }
 
-    public IngRec(Ingrediente listadoing, int c, Receta recetario){
+    public IngRec(Ingrediente listadoing, int c){
         this.listadoing=listadoing;
         this.setCantidad(c);
         this.recetario=recetario;
@@ -29,7 +29,7 @@ public class IngRec extends Model {
         this.cantidad = cantidad;
     }
 
-    public int getCantidad() {
-        return cantidad;
-    }
+    public int getCantidad()
+
+
 }

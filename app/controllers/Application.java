@@ -34,6 +34,10 @@ public class Application extends Controller{
         addIngrediente("Huevos de gallina", "Huevos");
         addIngrediente("Lomo de salmón", "Pescado");
 
+        Receta rec3= new Receta("Arroz a la cubana", "Freir el huevo y cocer el arroz").save();
+        rec3.addIReceta("Huevos de gallina", 2);
+        rec3.addIReceta("Arroz blanco", 2);
+
 
         IngRec relacio1 = new IngRec(dos2,200,rec1).save();
         Receta r1 = Receta.find("byNombre", "Piperrada").first();
