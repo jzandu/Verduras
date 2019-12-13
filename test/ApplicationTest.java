@@ -13,5 +13,11 @@ public class ApplicationTest extends FunctionalTest {
         assertContentType("text/html", response);
         assertCharset(play.Play.defaultWebEncoding, response);
     }
-    
+    @Test
+    public void testAddIReceta(){
+        Receta receta1 = new Receta("Huevos a la cubana", "Freir el huevo y cocer el arroz").save();
+        Ingrediente ingrediente1 = new Ingrediente("Arroz blanco", "Cereal").save();
+        receta1.addIReceta("Huevos de gallina", 2);
+    }
+
 }

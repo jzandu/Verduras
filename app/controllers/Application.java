@@ -4,18 +4,18 @@ import play.*;
 import play.mvc.*;
 
 import java.util.*;
-import views.*;
+import java.util.logging.Logger;
+
 import models.*;
 import javax.persistence.*;
 import play.db.jpa.*;
 
 
 public class Application extends Controller{
+    final static Logger log = Logger.getLogger(Application.class.getName());
+
     public void index() {
-        String h1 = "select nombre from Ingrediente";
-        Query query1 = JPA.em().createQuery(h1);
-        List<String> listatodos = query1.getResultList();
-        renderJSON(listatodos);
+        render();
     }
 
 
@@ -28,20 +28,17 @@ public class Application extends Controller{
         dos2= new Ingrediente("Tomates", "Hortaliza").save();
         dos2 = new Ingrediente("Filete de ternera" ,"Carne").save();
         dos2 = new Ingrediente("Pimiento verde", "Hortaliza").save();
+
         addIngrediente("Pimiento verde", "Hortaliza");
         addIngrediente("Pimiento rojo", "Hortaliza");
-        addIngrediente("Arroz blando", "Cereal");
+        addIngrediente("Arroz blanco", "Cereal");
         addIngrediente("Huevos de gallina", "Huevos");
         addIngrediente("Lomo de salmón", "Pescado");
 
         Receta rec3= new Receta("Arroz a la cubana", "Freir el huevo y cocer el arroz").save();
         rec3.addIReceta("Huevos de gallina", 2);
         rec3.addIReceta("Arroz blanco", 2);
-
-
-        IngRec relacio1 = new IngRec(dos2,200,rec1).save();
-        Receta r1 = Receta.find("byNombre", "Piperrada").first();
-        renderJSON(r1);
+        verIngredientes("Arroz a la cubana");
 
     }
 
@@ -53,18 +50,20 @@ public class Application extends Controller{
     public String masRecetas() {
         return null;
     }
-
-    public void verIngredientes() {
+    /*Aqui tengo un problema, ya que mi clase intermedia que relaciona ingredientes, recetas y cantidades tiene id, con lo cual debería hacer un query que diga:
+     dame los nombres de ingrediente de...tengo que conseguir el id antes y eso está en la base de datos no en java*/
+    public void verIngredientes(String nombreReceta) {
+        Receta receta = Receta.find("byNombre", nombreReceta).first();
+        receta = Receta.find("byId", receta).fetch();
+        Query query1 = JPA.em().createQuery("select listadoing_id from IngRec where recetario_id = "+receta.ge);
+        List<String> listatodos = query1.getResultList();
+        renderJSON(listatodos);
         //OPCIONES POR ORDEN DE DIFICULTAD
         // 1 Ves una receta y te muestra sus ingredientes
         // 2 Busca las recetas que contienen un ingrediente
 
     }
 
-    /*public static Ingrediente addIngrediente(String nombre){
-
-        return new Ingrediente(nombre).save();
-    }*/
 
     public void addIngrediente(String nombre,String tipo){
         Ingrediente ni = Ingrediente.find("byNombre", nombre).first();
@@ -74,11 +73,4 @@ public class Application extends Controller{
         }
 
     }
-    /*NO hace mas que darme problemas al intentar hacer esta funcion
-    puede ser que se por que no ha inicializado la bd??*/
-
-    public void addReceta(){
-
-    }
-
 }
