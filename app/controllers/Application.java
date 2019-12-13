@@ -4,15 +4,15 @@ import play.*;
 import play.mvc.*;
 
 import java.util.*;
-
+import views.*;
 import models.*;
 
 public class Application extends Controller{
-    public static void index() {
+    public void index() {
         inicializarBD();
-        render();
+        renderText("ASi funciona")
     }
-    public static void inicializarBD(){
+    public void inicializarBD(){
 
         Ingrediente dos2 = new Ingrediente("Lentejas pardina").save();
         dos2 = new Ingrediente("Pimiento verde").save();
@@ -49,7 +49,7 @@ public class Application extends Controller{
         return new Ingrediente(nombre).save();
     }*/
 
-    public static void addIngrediente(String nombre){
+    public void addIngrediente(String nombre){
         Ingrediente ni = Ingrediente.find("byNom", nombre).first();
         if (ni == null) {
             ni = new Ingrediente(nombre);
