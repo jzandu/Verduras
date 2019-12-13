@@ -21,18 +21,19 @@ public class Application extends Controller{
 
     public void idb(){
         Ingrediente dos2 = new Ingrediente("Lentejas pardina", "Legumbre").save();
+        Receta rec1 = new Receta("Lentejas a la aragonesa", "Cocer las lentejas").save();
+        Receta rec2 = new Receta("Piperrada", "Cortar los pimientos").save();
+
         dos2= new Ingrediente("Patatas", "Hortaliza").save();
         dos2= new Ingrediente("Tomates", "Hortaliza").save();
         dos2 = new Ingrediente("Filete de ternera" ,"Carne").save();
         dos2 = new Ingrediente("Pimiento verde", "Hortaliza").save();
         addIngrediente("Pimiento verde", "Hortaliza");
         addIngrediente("Pimiento rojo", "Hortaliza");
+        addIngrediente("Arroz blando", "Cereal");
+        addIngrediente("Huevos de gallina", "Huevos");
+        addIngrediente("Lomo de salmón", "Pescado");
 
-
-
-
-        Receta rec1 = new Receta("Lentejas a la aragonesa", "Cocer las lentejas").save();
-        Receta rec2 = new Receta("Piperrada", "Cortar los pimientos").save();
 
         IngRec relacio1 = new IngRec(dos2,200,rec1).save();
         Receta r1 = Receta.find("byNombre", "Piperrada").first();
