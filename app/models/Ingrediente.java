@@ -20,7 +20,7 @@ public class Ingrediente extends Model {
     }//NO termino de entender esto, se podría quitar (en este caso)
 
     public Ingrediente(String n) {
-        this.setNom(n);
+        this.nom=n;
     }
 
     public String getNom() {
@@ -31,9 +31,8 @@ public class Ingrediente extends Model {
         this.nom = n;
     }
 
-    public static void addIngrediente(String nombre){
+    /*public static void addIngrediente(String nombre){
         Ingrediente n = new Ingrediente(nombre).save();
 
-    }
-
+    }*/
 }

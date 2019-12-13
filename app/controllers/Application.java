@@ -14,8 +14,11 @@ public class Application extends Controller{
     }
     public static void inicializarBD(){
 
-        addIngrediente("Pimiento Verde");
         Ingrediente dos2 = new Ingrediente("Lentejas pardina").save();
+        dos2 = new Ingrediente("Pimiento verde").save();
+        //addIngrediente("Pimkiento Verde");
+        addIngrediente("Pimiento verde");
+
 
         Receta rec1 = new Receta("Lentejas a la aragonesa", "Cocer las lentejas").save();
         Receta rec2 = new Receta("Piperrada", "Cortar los pimientos").save();
@@ -41,9 +44,21 @@ public class Application extends Controller{
 
     }
 
-    public static Ingrediente addIngrediente(String nombre){
+    /*public static Ingrediente addIngrediente(String nombre){
+
         return new Ingrediente(nombre).save();
+    }*/
+
+    public static void addIngrediente(String nombre){
+        Ingrediente ni = Ingrediente.find("byNom", nombre).first();
+        if (ni == null) {
+            ni = new Ingrediente(nombre);
+            ni.save();
+        }
+
     }
+    /*NO hace mas que darme problemas al intentar hacer esta funcion
+    puede ser que se por que no ha inicializado la bd??*/
 
     public void addReceta(){
 
