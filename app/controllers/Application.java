@@ -38,7 +38,8 @@ public class Application extends Controller{
         Receta rec3= new Receta("Arroz a la cubana", "Freir el huevo y cocer el arroz").save();
         rec3.addIReceta("Huevos de gallina", 2);
         rec3.addIReceta("Arroz blanco", 2);
-        verIngredientes("Arroz a la cubana");
+
+        //verIngredientes("Arroz a la cubana");
 
     }
 
@@ -51,25 +52,46 @@ public class Application extends Controller{
         return null;
     }
     /*Aqui tengo un problema, ya que mi clase intermedia que relaciona ingredientes, recetas y cantidades tiene id, con lo cual debería hacer un query que diga:
-     dame los nombres de ingrediente de...tengo que conseguir el id antes y eso está en la base de datos no en java*/
+     dame los nombres de ingrediente de...tengo que conseguir el id antes y eso está en la base de datos no en java
+     Error raised is : The return type is incompatible with Model.getId()
+    */
+
     public void verIngredientes(String nombreReceta) {
         Receta receta = Receta.find("byNombre", nombreReceta).first();
+        if (receta!=null) {
+            Query query1 = JPA.em().createQuery("select listadoing from IngRec where recetario = "+receta);
+            List<Ingrediente> listatodos = query1.getResultList();
+            renderJSON(listatodos);
+        } else{
+            String h1 = ("select nombre, texto from Receta");
+            Query query2 = JPA.em().createQuery(h1);
+            List<Receta> listaReceta = query2.getResultList();
+            renderJSON(listaReceta);
+        }
+    }
 
-        Query query1 = JPA.em().createQuery("select listadoing from IngRec where recetario = "+u);
-        List<Ingrediente> listatodos = query1.getResultList();
+    public void json0(){
+        String h1 = "select nombre from Ingrediente";
+        Query query1 = JPA.em().createQuery(h1);
+        List<String> listatodos = query1.getResultList();
         renderJSON(listatodos);
+    }
 
-        //Ingrediente lp = IngRec.find("byId",receta.getId()).fetch();
-        //renderJSON(lp);
-        //Query query2 = JPA.em().creatyQuery("select id from receta where nombre="+nombreReceta);
-
+    public void json1(){
+        Receta r1 = Receta.find("byNombre", "Piperrada").first();
+        renderJSON(r1);
+    }
+    public void json2(){
+        Query query3 = JPA.em().createQuery("select nombre from IngRec");
+        List<String> lista3 = query3.getResultList();
+        renderJSON(lista3);
+    }
 
 
         //OPCIONES POR ORDEN DE DIFICULTAD
         // 1 Ves una receta y te muestra sus ingredientes
         // 2 Busca las recetas que contienen un ingrediente
 
-    }
 
 
     public void addIngrediente(String nombre,String tipo){

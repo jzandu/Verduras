@@ -10,14 +10,16 @@ import javax.persistence.ManyToOne;
 public class IngRec extends Model {
 
     private int cantidad;
-    @ManyToOne
-    private Ingrediente listadoing;
-    @ManyToOne
-    private Receta recetario;
 
-    public IngRec(){
+    @ManyToOne
+    public Ingrediente listadoing;
+
+    @ManyToOne
+    public Receta recetario;
+
+    /*public IngRec(){
         IngRec ir = null;
-    }
+    }*/
 
     public IngRec(Ingrediente listadoing, int c, Receta recetario){
         this.listadoing=listadoing;
