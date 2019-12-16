@@ -82,7 +82,7 @@ public class Application extends Controller{
         renderJSON(r1);
     }
     public void json2(){
-        Query query3 = JPA.em().createQuery("select nombre from IngRec");
+        Query query3 = JPA.em().createQuery("select listadoing from IngRec where recetario_id= 12", Ingrediente.class);
         List<String> lista3 = query3.getResultList();
         renderJSON(lista3);
     }
