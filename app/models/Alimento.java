@@ -32,6 +32,12 @@ public class Alimento extends Model {
         }else vegetariano=false;
     }
 
+    public Alimento(String s, String s1, String s2) {
+        this.nombre=s;
+        this.tipo=s1;
+        this.vegetariano=Boolean.parseBoolean(s2);
+    }
+
     public String getNombre() {
         return nombre;
     }

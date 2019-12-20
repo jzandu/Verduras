@@ -3,6 +3,7 @@ package controllers;
 import play.*;
 import play.mvc.*;
 
+import java.io.*;
 import java.util.*;
 import java.util.logging.Logger;
 
@@ -17,33 +18,6 @@ public class Application extends Controller {
     public static void index() {
         render();
     }
-
-
-    public void idb(){
-        Alimento dos2 = new Alimento("Lentejas pardina", "Legumbre").save();
-        Receta rec1 = new Receta("Lentejas a la aragonesa", "Cocer las lentejas").save();
-        Receta rec2 = new Receta("Piperrada", "Cortar los pimientos").save();
-
-        dos2= new Alimento("Patatas", "Hortaliza").save();
-        rec1.addIngredienteAReceta("Lentejas pardina", 200);
-
-        dos2= new Alimento("Tomates", "Hortaliza").save();
-        dos2 = new Alimento("Filete de ternera" ,"Carne").save();
-        dos2 = new Alimento("Pimiento verde", "Hortaliza").save();
-
-        addAlimento("Pimiento verde", "Hortaliza");
-        addAlimento("Pimiento rojo", "Hortaliza");
-        addAlimento("Arroz blanco", "Cereal");
-        addAlimento("Huevos de gallina", "Huevos");
-        addAlimento("Lomo de salmón", "Pescado");
-
-        Receta rec3= new Receta("Arroz a la cubana", "Freir el huevo y cocer el arroz").save();
-        rec3.addIngredienteAReceta("Huevos de gallina", 2);
-        rec3.addIngredienteAReceta("Arroz blanco", 2);
-        verIngredientes("Arroz a la ckubana");
-
-    }
-
 
     public void hacerMenu() {
 
@@ -105,4 +79,45 @@ public class Application extends Controller {
         }
 
     }
+
+
+    public void idb() throws IOException {
+        Alimento aux0;
+        File file = new File("documentation/files/AlimentosJSON");
+        FileReader f = new FileReader(file);
+        BufferedReader br = new BufferedReader(f);
+
+        String linea = br.readLine();
+        while (!linea.equals(".")){
+            String campo[] = linea.split(",");
+            log.info(campo[0]+campo[1]+campo[2]);
+            aux0 = new Alimento(campo[0], campo[1], campo[2]);
+            aux0.save();
+            linea = br.readLine();
+        }
+
+
+        Alimento dos2 = new Alimento("Lentejas pardina", "Legumbre").save();
+        Receta rec1 = new Receta("Lentejas a la aragonesa", "Cocer las lentejas").save();
+        Receta rec2 = new Receta("Piperrada", "Cortar los pimientos").save();
+
+        dos2= new Alimento("Patatas", "Hortaliza").save();
+        rec1.addIngredienteAReceta("Lentejas pardina", 200);
+
+        dos2= new Alimento("Tomates", "Hortaliza").save();
+        dos2 = new Alimento("Filete de ternera" ,"Carne").save();
+        dos2 = new Alimento("Pimiento verde", "Hortaliza").save();
+
+        addAlimento("Pimiento verde", "Hortaliza");
+        addAlimento("Pimiento rojo", "Hortaliza");
+        addAlimento("Arroz blanco", "Cereal");
+        addAlimento("Huevos de gallina", "Huevos");
+        addAlimento("Lomo de salmón", "Pescado");
+
+        Receta rec3= new Receta("Arroz a la cubana", "Freir el huevo y cocer el arroz").save();
+        rec3.addIngredienteAReceta("Huevos de gallina", 2);
+        rec3.addIngredienteAReceta("Arroz blanco", 2);
+
+    }
+
 }
