@@ -16,8 +16,8 @@ public class ApplicationTest extends FunctionalTest {
     @Test
     public void testAddIReceta(){
         Receta receta1 = new Receta("Huevos a la cubana", "Freir el huevo y cocer el arroz").save();
-        Ingrediente ingrediente1 = new Ingrediente("Arroz blanco", "Cereal").save();
-        receta1.addIReceta("Huevos de gallina", 2);
+        Alimento alimento1 = new Alimento("Arroz blanco", "Cereal").save();
+        receta1.addIngredienteAReceta("Huevos de gallina", 2);
     }
 
 }

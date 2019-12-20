@@ -11,35 +11,37 @@ import javax.persistence.*;
 import play.db.jpa.*;
 
 
-public class Application extends Controller{
+public class Application extends Controller {
     final static Logger log = Logger.getLogger(Application.class.getName());
 
-    public void index() {
+    public static void index() {
         render();
     }
 
 
     public void idb(){
-        Ingrediente dos2 = new Ingrediente("Lentejas pardina", "Legumbre").save();
+        Alimento dos2 = new Alimento("Lentejas pardina", "Legumbre").save();
         Receta rec1 = new Receta("Lentejas a la aragonesa", "Cocer las lentejas").save();
         Receta rec2 = new Receta("Piperrada", "Cortar los pimientos").save();
 
-        dos2= new Ingrediente("Patatas", "Hortaliza").save();
-        dos2= new Ingrediente("Tomates", "Hortaliza").save();
-        dos2 = new Ingrediente("Filete de ternera" ,"Carne").save();
-        dos2 = new Ingrediente("Pimiento verde", "Hortaliza").save();
+        dos2= new Alimento("Patatas", "Hortaliza").save();
+        rec1.addIngredienteAReceta("Lentejas pardina", 200);
 
-        addIngrediente("Pimiento verde", "Hortaliza");
-        addIngrediente("Pimiento rojo", "Hortaliza");
-        addIngrediente("Arroz blanco", "Cereal");
-        addIngrediente("Huevos de gallina", "Huevos");
-        addIngrediente("Lomo de salmón", "Pescado");
+        dos2= new Alimento("Tomates", "Hortaliza").save();
+        dos2 = new Alimento("Filete de ternera" ,"Carne").save();
+        dos2 = new Alimento("Pimiento verde", "Hortaliza").save();
+
+        addAlimento("Pimiento verde", "Hortaliza");
+        addAlimento("Pimiento rojo", "Hortaliza");
+        addAlimento("Arroz blanco", "Cereal");
+        addAlimento("Huevos de gallina", "Huevos");
+        addAlimento("Lomo de salmón", "Pescado");
 
         Receta rec3= new Receta("Arroz a la cubana", "Freir el huevo y cocer el arroz").save();
-        rec3.addIReceta("Huevos de gallina", 2);
-        rec3.addIReceta("Arroz blanco", 2);
+        rec3.addIngredienteAReceta("Huevos de gallina", 2);
+        rec3.addIngredienteAReceta("Arroz blanco", 2);
 
-        //verIngredientes("Arroz a la cubana");
+        verIngredientes("Arroz a la cubana");
 
     }
 
@@ -59,13 +61,15 @@ public class Application extends Controller{
     public void verIngredientes(String nombreReceta) {
         Receta receta = Receta.find("byNombre", nombreReceta).first();
         if (receta!=null) {
-            Query query1 = JPA.em().createQuery("select listadoing from IngRec where recetario = "+receta);
+
+            Query query1 = JPA.em().createQuery("select ingredienteReceta, recetario from Ingrediente");
             List<Ingrediente> listatodos = query1.getResultList();
+            log.info(String.valueOf(listatodos));
             renderJSON(listatodos);
         } else{
             String h1 = ("select nombre, texto from Receta");
             Query query2 = JPA.em().createQuery(h1);
-            List<Receta> listaReceta = query2.getResultList();
+            List listaReceta = query2.getResultList();
             renderJSON(listaReceta);
         }
     }
@@ -82,7 +86,7 @@ public class Application extends Controller{
         renderJSON(r1);
     }
     public void json2(){
-        Query query3 = JPA.em().createQuery("select listadoing from IngRec where recetario_id= 12", Ingrediente.class);
+        Query query3 = JPA.em().createQuery("select listadoing from IngRec where recetario_id= 12", Alimento.class);
         List<String> lista3 = query3.getResultList();
         renderJSON(lista3);
     }
@@ -94,10 +98,10 @@ public class Application extends Controller{
 
 
 
-    public void addIngrediente(String nombre,String tipo){
-        Ingrediente ni = Ingrediente.find("byNombre", nombre).first();
+    public void addAlimento(String nombre, String tipo){
+        Alimento ni = Alimento.find("byNombre", nombre).first();
         if (ni == null) {
-            ni = new Ingrediente(nombre,tipo);
+            ni = new Alimento(nombre,tipo);
             ni.save();
         }
 
