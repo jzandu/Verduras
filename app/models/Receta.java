@@ -15,7 +15,6 @@ public class Receta extends Model {
     private String nombre;
     @OneToMany(mappedBy = "recetario")
     private List<Ingrediente> ingredienteporreceta;
-    @Lob
     private String texto;
 
 
