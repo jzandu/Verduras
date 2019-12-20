@@ -13,12 +13,10 @@ public class Receta extends Model {
     final static Logger log = Logger.getLogger(Receta.class.getName());
 
     private String nombre;
-
-    @Lob
-    private String texto;
-
     @OneToMany(mappedBy = "recetario")
     private List<Ingrediente> ingredienteporreceta;
+    @Lob
+    private String texto;
 
 
     public Receta() {
@@ -53,6 +51,7 @@ public class Receta extends Model {
     }
 
 
-    public String toString() { return this.nombre;
+    public String toString() {
+        return this.nombre;
     }
 }

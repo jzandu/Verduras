@@ -40,7 +40,6 @@ public class Application extends Controller {
         Receta rec3= new Receta("Arroz a la cubana", "Freir el huevo y cocer el arroz").save();
         rec3.addIngredienteAReceta("Huevos de gallina", 2);
         rec3.addIngredienteAReceta("Arroz blanco", 2);
-
         verIngredientes("Arroz a la cubana");
 
     }
@@ -62,16 +61,15 @@ public class Application extends Controller {
         Receta receta = Receta.find("byNombre", nombreReceta).first();
         if (receta!=null) {
 
-            Query query1 = JPA.em().createQuery("select ingredienteReceta, recetario from Ingrediente");
-            List<Ingrediente> listatodos = query1.getResultList();
-            log.info(String.valueOf(listatodos));
+            Query query1 = JPA.em().createQuery("select ingredienteReceta.nombre from Ingrediente");
+            List<String> listatodos = query1.getResultList();
             renderJSON(listatodos);
-        } else{
+        } /*else{
             String h1 = ("select nombre, texto from Receta");
             Query query2 = JPA.em().createQuery(h1);
             List listaReceta = query2.getResultList();
             renderJSON(listaReceta);
-        }
+        }*/
     }
 
     public void json0(){
