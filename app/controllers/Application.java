@@ -83,6 +83,7 @@ public class Application extends Controller {
 
     public void idb() throws IOException {
         Alimento aux0;
+        //Añadidos nuevos alimentos a la BBDD para que sea mas rápido
         File file = new File("documentation/files/AlimentosJSON");
         FileReader f = new FileReader(file);
         BufferedReader br = new BufferedReader(f);
@@ -90,8 +91,9 @@ public class Application extends Controller {
         String linea = br.readLine();
         while (!linea.equals(".")){
             String campo[] = linea.split(",");
-            log.info(campo[0]+campo[1]+campo[2]);
+
             aux0 = new Alimento(campo[0], campo[1], campo[2]);
+            log.info(aux0.toString());
             aux0.save();
             linea = br.readLine();
         }

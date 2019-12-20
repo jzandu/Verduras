@@ -54,4 +54,8 @@ public class Alimento extends Model {
         this.tipo = tipo;
     }
 
+    public String toString(){
+        return "Alimento "+this.nombre+
+                " de tipo: "+tipo;
+    }
 }
