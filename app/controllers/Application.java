@@ -3,6 +3,7 @@ package controllers;
 import play.*;
 import play.mvc.*;
 
+import java.io.*;
 import java.util.*;
 import java.util.logging.Logger;
 
@@ -17,33 +18,6 @@ public class Application extends Controller {
     public static void index() {
         render();
     }
-
-
-    public void idb(){
-        Alimento dos2 = new Alimento("Lentejas pardina", "Legumbre").save();
-        Receta rec1 = new Receta("Lentejas a la aragonesa", "Cocer las lentejas").save();
-        Receta rec2 = new Receta("Piperrada", "Cortar los pimientos").save();
-
-        dos2= new Alimento("Patatas", "Hortaliza").save();
-        rec1.addIngredienteAReceta("Lentejas pardina", 200);
-
-        dos2= new Alimento("Tomates", "Hortaliza").save();
-        dos2 = new Alimento("Filete de ternera" ,"Carne").save();
-        dos2 = new Alimento("Pimiento verde", "Hortaliza").save();
-
-        addAlimento("Pimiento verde", "Hortaliza");
-        addAlimento("Pimiento rojo", "Hortaliza");
-        addAlimento("Arroz blanco", "Cereal");
-        addAlimento("Huevos de gallina", "Huevos");
-        addAlimento("Lomo de salmón", "Pescado");
-
-        Receta rec3= new Receta("Arrozcubana", "Freir el huevo y cocer el arroz").save();
-        rec3.addIngredienteAReceta("Huevos de gallina", 2);
-        rec3.addIngredienteAReceta("Arroz blanco", 2);
-        verIngredientes("Arrozcubana");
-
-    }
-
 
     public void hacerMenu() {
 
@@ -61,15 +35,16 @@ public class Application extends Controller {
         Receta receta = Receta.find("byNombre", nombreReceta).first();
         if (receta!=null) {
 
-            Query query1 = JPA.em().createQuery("select ingredienteReceta.nombre from Ingrediente where recetario.nombre= "+receta);
-            List<String> listatodos = query1.getResultList();
+            Query query1 = JPA.em().createQuery("select ingredienteReceta.nombre, cantidad from Ingrediente where recetario =:nombreReceta");
+            query1.setParameter("nombreReceta", receta);
+            List<Alimento> listatodos = query1.getResultList();
             renderJSON(listatodos);
-        } /*else{
+        } else{
             String h1 = ("select nombre, texto from Receta");
             Query query2 = JPA.em().createQuery(h1);
-            List listaReceta = query2.getResultList();
+            List<Receta> listaReceta = query2.getResultList();
             renderJSON(listaReceta);
-        }*/
+        }
     }
 
     public void json0(){
@@ -104,4 +79,47 @@ public class Application extends Controller {
         }
 
     }
+
+
+    public void idb() throws IOException {
+        Alimento aux0;
+        //Añadidos nuevos alimentos a la BBDD para que sea mas rápido
+        File file = new File("documentation/files/AlimentosJSON");
+        FileReader f = new FileReader(file);
+        BufferedReader br = new BufferedReader(f);
+
+        String linea = br.readLine();
+        while (!linea.equals(".")){
+            String campo[] = linea.split(",");
+
+            aux0 = new Alimento(campo[0], campo[1], campo[2]);
+            log.info(aux0.toString());
+            aux0.save();
+            linea = br.readLine();
+        }
+
+
+        Alimento dos2 = new Alimento("Lentejas pardina", "Legumbre").save();
+        Receta rec1 = new Receta("Lentejas a la aragonesa", "Cocer las lentejas").save();
+        Receta rec2 = new Receta("Piperrada", "Cortar los pimientos").save();
+
+        dos2= new Alimento("Patatas", "Hortaliza").save();
+        rec1.addIngredienteAReceta("Lentejas pardina", 200);
+
+        dos2= new Alimento("Tomates", "Hortaliza").save();
+        dos2 = new Alimento("Filete de ternera" ,"Carne").save();
+        dos2 = new Alimento("Pimiento verde", "Hortaliza").save();
+
+        addAlimento("Pimiento verde", "Hortaliza");
+        addAlimento("Pimiento rojo", "Hortaliza");
+        addAlimento("Arroz blanco", "Cereal");
+        addAlimento("Huevos de gallina", "Huevos");
+        addAlimento("Lomo de salmón", "Pescado");
+
+        Receta rec3= new Receta("Arroz a la cubana", "Freir el huevo y cocer el arroz").save();
+        rec3.addIngredienteAReceta("Huevos de gallina", 2);
+        rec3.addIngredienteAReceta("Arroz blanco", 2);
+
+    }
+
 }

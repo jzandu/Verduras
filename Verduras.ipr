@@ -155,6 +155,9 @@
       <module fileurl="file://$PROJECT_DIR$/Verduras.iml" filepath="$PROJECT_DIR$/Verduras.iml" />
     </modules>
   </component>
+  <component name="ProjectPlainTextFileTypeManager">
+    <file url="file://$PROJECT_DIR$/documentation/files/AlimentosJSON" />
+  </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" project-jdk-name="13" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/tmp/classes" />
   </component>

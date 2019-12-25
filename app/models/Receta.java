@@ -1,4 +1,5 @@
 package models;
+import jdk.internal.org.jline.utils.Log;
 import play.db.jpa.Model;
 
 import java.util.List;
@@ -13,6 +14,7 @@ public class Receta extends Model {
     final static Logger log = Logger.getLogger(Receta.class.getName());
 
     private String nombre;
+
     @OneToMany(mappedBy = "recetario")
     private List<Ingrediente> ingredienteporreceta;
     private String texto;
