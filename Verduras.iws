@@ -2,11 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="74c89310-bde5-4fc7-8ec7-4bf9b4414c76" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/Verduras.ipr" beforeDir="false" afterPath="$PROJECT_DIR$/Verduras.ipr" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Verduras.iws" beforeDir="false" afterPath="$PROJECT_DIR$/Verduras.iws" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/controllers/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/Application.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/Alimento.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/Alimento.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tmp/bytecode/DEV/controllers.Application" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/bytecode/DEV/controllers.Application" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/bytecode/DEV/models.Alimento" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/bytecode/DEV/models.Alimento" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,7 +71,7 @@
       <recent name="$PROJECT_DIR$/lib" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.ApplicationTest.testThatIndexPageWorks">
     <configuration name="ApplicationTest.testAddIReceta" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Verduras" />
       <option name="PACKAGE_NAME" value="" />
@@ -83,8 +82,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ApplicationTest.testThatIndexPageWorks" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Verduras" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="ApplicationTest" />
+      <option name="METHOD_NAME" value="testThatIndexPageWorks" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ApplicationTest.testThatIndexPageWorks" />
         <item itemvalue="JUnit.ApplicationTest.testAddIReceta" />
       </list>
     </recent_temporary>
@@ -118,6 +128,8 @@
       <workItem from="1576481614857" duration="199000" />
       <workItem from="1576779519785" duration="6611000" />
       <workItem from="1576837057383" duration="1225000" />
+      <workItem from="1578261798647" duration="39000" />
+      <workItem from="1578343436809" duration="4772000" />
     </task>
     <task id="LOCAL-00001" summary="Borrada interfaz">
       <created>1572017310616</created>
@@ -231,7 +243,14 @@
       <option name="project" value="LOCAL" />
       <updated>1576848288506</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Nuevos alimentos introducidos">
+      <created>1576857254746</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1576857254747</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -265,13 +284,18 @@
     <MESSAGE value="Falta android" />
     <MESSAGE value="Probados nuevos JSON" />
     <MESSAGE value="Metidos nuevos datos en la base de datos" />
-    <option name="LAST_COMMIT_MESSAGE" value="Metidos nuevos datos en la base de datos" />
+    <MESSAGE value="Nuevos alimentos introducidos" />
+    <option name="LAST_COMMIT_MESSAGE" value="Nuevos alimentos introducidos" />
   </component>
   <component name="WindowStateProjectService">
     <state x="726" y="310" width="524" height="484" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog" timestamp="1576241787615">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="726" y="310" width="524" height="484" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1576241787615" />
+    <state x="222" y="357" width="624" height="390" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1578347441948">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="222" y="357" width="624" height="390" key="#com.intellij.fileTypes.FileTypeChooser/67.27.1853.1053@67.27.1853.1053" timestamp="1578347441948" />
     <state x="801" y="239" width="374" height="626" key="#com.intellij.ide.util.MemberChooser" timestamp="1576277333367">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
@@ -292,14 +316,14 @@
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="726" y="301" width="524" height="502" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1576256422958" />
-    <state x="558" y="149" width="860" height="800" key="CommitChangelistDialog2" timestamp="1576848288425">
+    <state x="558" y="149" width="860" height="800" key="CommitChangelistDialog2" timestamp="1576857254677">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="558" y="149" width="860" height="800" key="CommitChangelistDialog2/67.27.1853.1053@67.27.1853.1053" timestamp="1576848288425" />
-    <state x="243" y="116" width="1482" height="872" key="DiffContextDialog" timestamp="1576783443910">
+    <state x="558" y="149" width="860" height="800" key="CommitChangelistDialog2/67.27.1853.1053@67.27.1853.1053" timestamp="1576857254677" />
+    <state x="243" y="116" width="1482" height="872" key="DiffContextDialog" timestamp="1578344474506">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="243" y="116" width="1482" height="872" key="DiffContextDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1576783443910" />
+    <state x="243" y="116" width="1482" height="872" key="DiffContextDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1578344474506" />
     <state x="776" y="310" width="424" height="484" key="FileChooserDialogImpl" timestamp="1576252310373">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
@@ -308,18 +332,18 @@
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="482" y="187" width="1024" height="845" key="SettingsEditor/67.27.1853.1053@67.27.1853.1053" timestamp="1576779750089" />
-    <state x="588" y="288" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1576848290781">
+    <state x="588" y="288" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1576857256454">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="588" y="288" width="800" height="528" key="Vcs.Push.Dialog.v2/67.27.1853.1053@67.27.1853.1053" timestamp="1576848290781" />
+    <state x="588" y="288" width="800" height="528" key="Vcs.Push.Dialog.v2/67.27.1853.1053@67.27.1853.1053" timestamp="1576857256454" />
     <state x="167" y="125" width="1653" height="855" key="com.intellij.dvcs.ui.CompareBranchesDialog" timestamp="1576237894180">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="167" y="125" width="1653" height="855" key="com.intellij.dvcs.ui.CompareBranchesDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1576237894180" />
-    <state x="649" y="380" key="com.intellij.ide.util.TipDialog" timestamp="1576837066419">
+    <state x="649" y="380" key="com.intellij.ide.util.TipDialog" timestamp="1578261805511">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="649" y="380" key="com.intellij.ide.util.TipDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1576837066419" />
+    <state x="649" y="380" key="com.intellij.ide.util.TipDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1578261805511" />
     <state x="665" y="448" width="646" height="208" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1576779747742">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>

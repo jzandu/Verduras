@@ -4,6 +4,8 @@ import play.*;
 import play.mvc.*;
 
 import java.io.*;
+import java.net.URI;
+import java.net.URISyntaxException;
 import java.util.*;
 import java.util.logging.Logger;
 
@@ -81,17 +83,16 @@ public class Application extends Controller {
     }
 
 
-    public void idb() throws IOException {
+    public void idb() throws IOException, URISyntaxException {
         Alimento aux0;
         //Añadidos nuevos alimentos a la BBDD para que sea mas rápido
-        File file = new File("documentation/files/AlimentosJSON");
+        File file = new File("Verduras/documentation/files/AlimentosFile");
         FileReader f = new FileReader(file);
         BufferedReader br = new BufferedReader(f);
 
         String linea = br.readLine();
         while (!linea.equals(".")){
             String campo[] = linea.split(",");
-
             aux0 = new Alimento(campo[0], campo[1], campo[2]);
             log.info(aux0.toString());
             aux0.save();
