@@ -14,10 +14,10 @@ public class Receta extends Model {
     final static Logger log = Logger.getLogger(Receta.class.getName());
 
     private String nombre;
-
+    @Lob
+    private String texto;
     @OneToMany(mappedBy = "recetario")
     private List<Ingrediente> ingredienteporreceta;
-    private String texto;
 
 
     public Receta() {
@@ -42,15 +42,6 @@ public class Receta extends Model {
     public  void setTexto(String rec) {
         this.texto=rec;
     }
-
-    public void addIngredienteAReceta(String ingredienteR, int cantidad){
-        Alimento ing1 = Alimento.find("byNombre", ingredienteR).first();
-        Receta rec1 = Receta.find("byNombre",this.getNombre()).first();
-
-        Ingrediente aux1 = new Ingrediente(ing1, cantidad, rec1).save();
-        log.info("Añadido nueva relacion "+aux1.toString());
-    }
-
 
     public String toString() {
         return this.nombre;

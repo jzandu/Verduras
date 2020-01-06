@@ -8,6 +8,7 @@ import java.net.URI;
 import java.net.URISyntaxException;
 import java.util.*;
 import java.util.logging.Logger;
+import java.util.regex.Pattern;
 
 import models.*;
 import javax.persistence.*;
@@ -82,9 +83,18 @@ public class Application extends Controller {
 
     }
 
+    public void addIngrediente(String receta, String alimento, String cantidad){
+        Receta r1 = Receta.find("byNombre",receta).first();
+        Alimento ing1 = Alimento.find("byNombre", alimento).first();
+
+        Ingrediente aux1 = new Ingrediente(ing1, cantidad, r1).save();
+        log.info("Añadido nueva relacion "+aux1.toString());
+    }
+
 
     public void idb() throws IOException, URISyntaxException {
-        Alimento aux0;
+        Alimento aux0;//hay que dejarlo fuera del bucle para que no de error
+
         //Añadidos nuevos alimentos a la BBDD para que sea mas rápido
         File file = new File("Verduras/documentation/files/AlimentosFile");
         FileReader f = new FileReader(file);
@@ -99,17 +109,30 @@ public class Application extends Controller {
             linea = br.readLine();
         }
 
+        //Nuevas recetas en la BBDD CON SISTEMA SCANNER
+        Scanner scan = new Scanner(new File("Verduras/documentation/files/RecetasFile"));
+        scan.useDelimiter(Pattern.compile("-----\n"));
+        Receta aux1;
 
+        while (scan.hasNext()){
+            String line = scan.next();
+            String campo[] = line.split("#");
+            log.info(campo[0]);
+            aux1 = new Receta(campo[0],campo[1]);
+            aux1.save();
+            campo = null;
+        }
+
+        //Diferentes metodos de añadir alimentos y recetas
         Alimento dos2 = new Alimento("Lentejas pardina", "Legumbre").save();
-        Receta rec1 = new Receta("Lentejas a la aragonesa", "Cocer las lentejas").save();
-        Receta rec2 = new Receta("Piperrada", "Cortar los pimientos").save();
-
         dos2= new Alimento("Patatas", "Hortaliza").save();
-        rec1.addIngredienteAReceta("Lentejas pardina", 200);
-
         dos2= new Alimento("Tomates", "Hortaliza").save();
         dos2 = new Alimento("Filete de ternera" ,"Carne").save();
         dos2 = new Alimento("Pimiento verde", "Hortaliza").save();
+
+        Receta rec1 = new Receta("Lentejas a la aragonesa", "Cocer las lentejas").save();
+        rec1 = new Receta("Piperrada", "Cortar los pimientos").save();
+        rec1= new Receta("Arroz a la cubana", "Freir el huevo y cocer el arroz").save();
 
         addAlimento("Pimiento verde", "Hortaliza");
         addAlimento("Pimiento rojo", "Hortaliza");
@@ -117,9 +140,14 @@ public class Application extends Controller {
         addAlimento("Huevos de gallina", "Huevos");
         addAlimento("Lomo de salmón", "Pescado");
 
-        Receta rec3= new Receta("Arroz a la cubana", "Freir el huevo y cocer el arroz").save();
-        rec3.addIngredienteAReceta("Huevos de gallina", 2);
-        rec3.addIngredienteAReceta("Arroz blanco", 2);
+        addIngrediente("Arroz a la cubana", "Huevos de gallina", "2");
+        addIngrediente("Arroz a la cubana", "Arroz blanco", "100g");
+        addIngrediente("Lentejas a la aragonesa", "Lentejas pardina", "200g");
+
+        addIngrediente("Risotto con Jamon\n", "Arroz bomba", "100g");
+        addIngrediente("Risotto con Jamon\n", "Jamon iberico", "2 trozos");
+        addIngrediente("Risotto con Jamon\n","Ajos", "1");
+        addIngrediente("Risotto con Jamon\n","Aceite de oliva", "50ml");
 
     }
 

@@ -1,20 +1,23 @@
-Zanahoria,Hortaliza,true
-Cebolla,Hortaliza,true
-Calabacín,Hortaliza,true
-Puerro,Hortaliza,true
+Zanahorias,Hortaliza,true
+Cebollas,Hortaliza,true
+Calabacines,Hortaliza,true
+Puerros,Hortaliza,true
 Patatas,Hortaliza,true
 Guisantes,Hortaliza,true
-Berro,Hortaliza,true
-Pomelo,Fruta,true
+Berros,Hortaliza,true
+Pomelos,Fruta,true
 Coco,Fruta,true
 Quinoa,Cereal,true
 Tofu,Cereal,true
 Higos,Fruta,true
 Datiles,Fruta,true
-Jamon ibérico,Carne,false
+Jamon iberico,Carne,false
 Chorizo,Carne,false
 Arroz bomba,Cereal,true
-Ajo,Condimento,true
+Ajos,Condimento,true
 Aceite de oliva,Condimento,true
 Aceite de coco,Condimento,true
+Queso parmesano,Lácteo,true
+Agua,,true
+Pimienta negra,Condimento,true
 .

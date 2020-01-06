@@ -11,22 +11,22 @@ public class Ingrediente extends Model {
 
     @ManyToOne
     public Alimento ingredienteReceta;
-    private int cantidad;
+    private String cantidad;
 
     @ManyToOne
     public Receta recetario;
 
-    public Ingrediente(Alimento ingredienteReceta, int cantidad, Receta recetario){
+    public Ingrediente(Alimento ingredienteReceta, String cantidad, Receta recetario){
         this.ingredienteReceta=ingredienteReceta;
         this.cantidad=cantidad;
         this.recetario=recetario;
     }
 
-    public void setCantidad(int cantidad) {
+    public void setCantidad(String cantidad) {
         this.cantidad = cantidad;
     }
 
-    public int getCantidad() {
+    public String getCantidad() {
         return cantidad;
     }
 
