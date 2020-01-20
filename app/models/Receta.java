@@ -1,5 +1,4 @@
 package models;
-import jdk.internal.org.jline.utils.Log;
 import play.db.jpa.Model;
 
 import java.util.List;
