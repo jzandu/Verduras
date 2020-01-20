@@ -99,8 +99,8 @@ public class Application extends Controller {
         Alimento aux0;//hay que dejarlo fuera del bucle para que no de error
 
         //Añadidos nuevos alimentos a la BBDD para que sea mas rápido
-        File file= new File("documentation/files/AlimentosFile");
-        //File file = new File("Verduras/documentation/files/AlimentosFile");
+        //File file= new File("documentation/files/AlimentosFile");
+        File file = new File("Verduras/documentation/files/AlimentosFile");
         FileReader f = new FileReader(file);
         BufferedReader br = new BufferedReader(f);
 
@@ -114,7 +114,7 @@ public class Application extends Controller {
         }
 
         //Nuevas recetas en la BBDD CON SISTEMA SCANNER
-        Scanner scan = new Scanner(new File("documentation/files/RecetasFile"));
+        Scanner scan = new Scanner(new File("Verduras/documentation/files/RecetasFile"));
         scan.useDelimiter(Pattern.compile("-----\n"));
         Receta aux1;
 
