@@ -2,14 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="74c89310-bde5-4fc7-8ec7-4bf9b4414c76" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/Verduras.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Verduras.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Verduras.ipr" beforeDir="false" afterPath="$PROJECT_DIR$/Verduras.ipr" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Verduras.iws" beforeDir="false" afterPath="$PROJECT_DIR$/Verduras.iws" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/controllers/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/Application.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/Alimento.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/Alimento.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/Ingrediente.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/Ingrediente.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/Application/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/Application/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/main.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tmp/bytecode/DEV/controllers.Application" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/bytecode/DEV/controllers.Application" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/bytecode/DEV/models.Alimento" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/bytecode/DEV/models.Alimento" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/bytecode/DEV/models.Receta" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/bytecode/DEV/models.Receta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/bytecode/DEV/models.Ingrediente" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/bytecode/DEV/models.Ingrediente" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tmp/classes/controllers/Application.class" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/classes/controllers/Application.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/classes/models/Receta.class" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/classes/models/Receta.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/classes/models/Ingrediente.class" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/classes/models/Ingrediente.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/classes/production/Verduras/views/Application/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/classes/production/Verduras/views/errors/404.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/classes/production/Verduras/views/errors/500.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/classes/production/Verduras/views/main.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/classes/test/Verduras/Application.test.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/classes/test/Verduras/data.yml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,10 +66,11 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="Arquillian JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.Arquillian JUnit4" value="" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Documentos/PES/JSonFilesExamples" />
-    <property name="project.structure.last.edited" value="Libraries" />
-    <property name="project.structure.proportion" value="0.0" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../prova" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.5013889" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
   </component>
   <component name="RecentsManager">
@@ -140,7 +151,7 @@
       <workItem from="1579392970074" duration="2478000" />
       <workItem from="1579434051819" duration="1308000" />
       <workItem from="1579482019973" duration="37000" />
-      <workItem from="1579542382417" duration="2789000" />
+      <workItem from="1579542382417" duration="9610000" />
     </task>
     <task id="LOCAL-00001" summary="Borrada interfaz">
       <created>1572017310616</created>
@@ -282,7 +293,14 @@
       <option name="project" value="LOCAL" />
       <updated>1579542628346</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Añadidas dos recetas">
+      <created>1579555287160</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1579555287160</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -322,6 +340,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="Añadidas dos recetas" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="588" y="214" width="800" height="677" key="#Project_Structure" timestamp="1579559474065">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="588" y="214" width="800" height="677" key="#Project_Structure/67.27.1853.1053@67.27.1853.1053" timestamp="1579559474065" />
     <state x="726" y="310" width="524" height="484" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog" timestamp="1576241787615">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
@@ -334,14 +356,14 @@
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="801" y="239" width="374" height="626" key="#com.intellij.ide.util.MemberChooser/67.27.1853.1053@67.27.1853.1053" timestamp="1576277333367" />
-    <state x="596" y="222" width="784" height="661" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog" timestamp="1576779788707">
+    <state x="596" y="222" width="784" height="661" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog" timestamp="1579555992257">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="596" y="222" width="784" height="661" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1576779788707" />
-    <state x="834" y="444" width="308" height="216" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1576237853630">
+    <state x="596" y="222" width="784" height="661" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1579555992257" />
+    <state x="834" y="444" width="308" height="216" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1579557427757">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="834" y="444" width="308" height="216" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1576237853630" />
+    <state x="834" y="444" width="308" height="216" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1579557427757" />
     <state x="602" y="48" width="762" height="1008" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1576780642839">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
@@ -350,30 +372,54 @@
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="726" y="301" width="524" height="502" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1576256422958" />
-    <state x="558" y="149" width="860" height="800" key="CommitChangelistDialog2" timestamp="1579542628252">
+    <state x="729" y="399" width="518" height="306" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1579557697028">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="558" y="149" width="860" height="800" key="CommitChangelistDialog2/67.27.1853.1053@67.27.1853.1053" timestamp="1579542628252" />
+    <state x="729" y="399" width="518" height="306" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/67.27.1853.1053@67.27.1853.1053" timestamp="1579557697028" />
+    <state x="558" y="149" width="860" height="800" key="CommitChangelistDialog2" timestamp="1579555286511">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="558" y="149" width="860" height="800" key="CommitChangelistDialog2/67.27.1853.1053@67.27.1853.1053" timestamp="1579555286511" />
     <state x="243" y="116" width="1482" height="872" key="DiffContextDialog" timestamp="1578344474506">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="243" y="116" width="1482" height="872" key="DiffContextDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1578344474506" />
-    <state x="776" y="310" width="424" height="484" key="FileChooserDialogImpl" timestamp="1576252310373">
+    <state x="776" y="310" width="424" height="484" key="FileChooserDialogImpl" timestamp="1579559654586">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="776" y="310" width="424" height="484" key="FileChooserDialogImpl/67.27.1853.1053@67.27.1853.1053" timestamp="1576252310373" />
+    <state x="776" y="310" width="424" height="484" key="FileChooserDialogImpl/67.27.1853.1053@67.27.1853.1053" timestamp="1579559654586" />
+    <state width="1807" height="278" key="GridCell.Tab.0.bottom" timestamp="1579560603209">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state width="1807" height="278" key="GridCell.Tab.0.bottom/67.27.1853.1053@67.27.1853.1053" timestamp="1579560603209" />
+    <state width="1807" height="278" key="GridCell.Tab.0.center" timestamp="1579560603207">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state width="1807" height="278" key="GridCell.Tab.0.center/67.27.1853.1053@67.27.1853.1053" timestamp="1579560603207" />
+    <state width="1807" height="278" key="GridCell.Tab.0.left" timestamp="1579560603206">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state width="1807" height="278" key="GridCell.Tab.0.left/67.27.1853.1053@67.27.1853.1053" timestamp="1579560603206" />
+    <state width="1807" height="278" key="GridCell.Tab.0.right" timestamp="1579560603208">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state width="1807" height="278" key="GridCell.Tab.0.right/67.27.1853.1053@67.27.1853.1053" timestamp="1579560603208" />
+    <state x="906" y="170" width="924" height="684" key="Maven.ArtifactSearchDialog" timestamp="1579556685288">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="906" y="170" width="924" height="684" key="Maven.ArtifactSearchDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1579556685288" />
     <state x="451" y="139" width="580" height="564" key="MultipleFileMergeDialog" timestamp="1578353458766">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="451" y="139" width="580" height="564" key="MultipleFileMergeDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1578353458766" />
-    <state x="482" y="187" width="1024" height="845" key="SettingsEditor" timestamp="1576779750089">
+    <state x="482" y="187" width="1328" height="845" key="SettingsEditor" timestamp="1579560548049">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="482" y="187" width="1024" height="845" key="SettingsEditor/67.27.1853.1053@67.27.1853.1053" timestamp="1576779750089" />
-    <state x="588" y="288" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1579542631491">
+    <state x="482" y="187" width="1328" height="845" key="SettingsEditor/67.27.1853.1053@67.27.1853.1053" timestamp="1579560548049" />
+    <state x="588" y="288" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1579555289014">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="588" y="288" width="800" height="528" key="Vcs.Push.Dialog.v2/67.27.1853.1053@67.27.1853.1053" timestamp="1579542631491" />
+    <state x="588" y="288" width="800" height="528" key="Vcs.Push.Dialog.v2/67.27.1853.1053@67.27.1853.1053" timestamp="1579555289014" />
     <state x="167" y="125" width="1653" height="855" key="com.intellij.dvcs.ui.CompareBranchesDialog" timestamp="1576237894180">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
@@ -382,10 +428,10 @@
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="649" y="380" key="com.intellij.ide.util.TipDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1579434050842" />
-    <state x="665" y="448" width="646" height="208" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1576779747742">
+    <state x="665" y="448" width="646" height="224" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1579557126672">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="665" y="448" width="646" height="208" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/67.27.1853.1053@67.27.1853.1053" timestamp="1576779747742" />
+    <state x="665" y="448" width="646" height="224" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/67.27.1853.1053@67.27.1853.1053" timestamp="1579557126672" />
     <state x="761" y="472" width="464" height="160" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1579395041961">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>

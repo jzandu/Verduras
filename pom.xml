@@ -8,5 +8,16 @@
     <artifactId>Verduras</artifactId>
     <version>1.0-SNAPSHOT</version>
 
-    
+
+        <dependency>
+            <groupId>org.hibernate.javax.persistence</groupId>
+            <artifactId>hibernate-jpa-2.1-api</artifactId>
+            <version>1.0.2.Final</version>
+        </dependency>
+        <dependency>
+            <groupId>com.typesafe.play</groupId>
+            <artifactId>play-java-jpa_2.13</artifactId>
+            <version>2.8.0</version>
+        </dependency>
+
 </project>

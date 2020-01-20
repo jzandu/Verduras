@@ -16,6 +16,10 @@ public class Ingrediente extends Model {
     @ManyToOne
     public Receta recetario;
 
+    public Ingrediente(){
+
+    }
+
     public Ingrediente(Alimento ingredienteReceta, String cantidad, Receta recetario){
         this.ingredienteReceta=ingredienteReceta;
         this.cantidad=cantidad;
@@ -29,10 +33,5 @@ public class Ingrediente extends Model {
     public String getCantidad() {
         return cantidad;
     }
-
-    public String toString(){
-        return (ingredienteReceta.getNombre());
-    }
-
 
 }
