@@ -59,4 +59,6 @@ public class Alimento extends Model {
         return "Alimento "+this.nombre+
                 " de tipo: "+tipo;
     }
+
+
 }

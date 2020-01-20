@@ -65,7 +65,7 @@ public class Application extends Controller {
 
 
 
-    public  void addAlimento(String nombre, String tipo){
+    public void addAlimento(String nombre, String tipo){
         Alimento ni = Alimento.find("byNombre", nombre).first();
         if (ni == null) {
             ni = new Alimento(nombre,tipo);
@@ -152,7 +152,7 @@ public class Application extends Controller {
         addIngrediente("Risotto con Jamon\n", "Jamon iberico", "2 trozos");
         addIngrediente("Risotto con Jamon\n","Ajos", "1");
         addIngrediente("Risotto con Jamon\n","Aceite de oliva", "50ml");
-        renderText("Iniciada BBDD");
+        renderText("INICIADA");
     }
 
 }

@@ -4,6 +4,12 @@
     <list default="true" id="74c89310-bde5-4fc7-8ec7-4bf9b4414c76" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/Verduras.iws" beforeDir="false" afterPath="$PROJECT_DIR$/Verduras.iws" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/controllers/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/Application.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/Alimento.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/Alimento.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/bytecode/DEV/controllers.Application" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/bytecode/DEV/controllers.Application" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/bytecode/DEV/models.Alimento" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/bytecode/DEV/models.Alimento" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/bytecode/DEV/models.Receta" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/bytecode/DEV/models.Receta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/classes/controllers/Application.class" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/classes/controllers/Application.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/classes/models/Receta.class" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/classes/models/Receta.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -134,7 +140,7 @@
       <workItem from="1579392970074" duration="2478000" />
       <workItem from="1579434051819" duration="1308000" />
       <workItem from="1579482019973" duration="37000" />
-      <workItem from="1579542382417" duration="239000" />
+      <workItem from="1579542382417" duration="2789000" />
     </task>
     <task id="LOCAL-00001" summary="Borrada interfaz">
       <created>1572017310616</created>
@@ -269,7 +275,14 @@
       <option name="project" value="LOCAL" />
       <updated>1579542409197</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Añadidas dos recetas">
+      <created>1579542628346</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1579542628346</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -337,10 +350,10 @@
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="726" y="301" width="524" height="502" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1576256422958" />
-    <state x="558" y="149" width="860" height="800" key="CommitChangelistDialog2" timestamp="1579542408307">
+    <state x="558" y="149" width="860" height="800" key="CommitChangelistDialog2" timestamp="1579542628252">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="558" y="149" width="860" height="800" key="CommitChangelistDialog2/67.27.1853.1053@67.27.1853.1053" timestamp="1579542408307" />
+    <state x="558" y="149" width="860" height="800" key="CommitChangelistDialog2/67.27.1853.1053@67.27.1853.1053" timestamp="1579542628252" />
     <state x="243" y="116" width="1482" height="872" key="DiffContextDialog" timestamp="1578344474506">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
@@ -357,10 +370,10 @@
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="482" y="187" width="1024" height="845" key="SettingsEditor/67.27.1853.1053@67.27.1853.1053" timestamp="1576779750089" />
-    <state x="588" y="288" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1579542414088">
+    <state x="588" y="288" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1579542631491">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="588" y="288" width="800" height="528" key="Vcs.Push.Dialog.v2/67.27.1853.1053@67.27.1853.1053" timestamp="1579542414088" />
+    <state x="588" y="288" width="800" height="528" key="Vcs.Push.Dialog.v2/67.27.1853.1053@67.27.1853.1053" timestamp="1579542631491" />
     <state x="167" y="125" width="1653" height="855" key="com.intellij.dvcs.ui.CompareBranchesDialog" timestamp="1576237894180">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
