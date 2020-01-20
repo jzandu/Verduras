@@ -22,14 +22,15 @@ public class Alimento extends Model {
         nombre = null;
     }//NO termino de entender esto, se podría quitar (en este caso)
 
+
     public Alimento(String nombre, String tipo) {
         this.nombre =nombre;
         this.tipo=tipo;
-        if(tipo=="Hortaliza"){
-            vegetariano=true;
-        }else if(tipo=="Cereal"){
-            vegetariano =true;
-        }else vegetariano=false;
+        if(tipo=="Carne"){
+            vegetariano=false;
+        }else if(tipo=="Pescado"){
+            vegetariano =false;
+        }else vegetariano=true;
     }
 
     public Alimento(String s, String s1, String s2) {
