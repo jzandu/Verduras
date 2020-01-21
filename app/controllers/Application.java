@@ -18,7 +18,7 @@ public class Application extends Controller{
 
     //Inicia la Base de Datos
     public void index() throws IOException {
-        //Diferentes metodos de añadir alimentos y recetas
+//Diferentes metodos de añadir alimentos y recetas
         Alimento dos2 = new Alimento("Lentejas pardina", "Legumbre").save();
         dos2= new Alimento("Patatas", "Hortaliza").save();
         dos2= new Alimento("Tomates", "Hortaliza").save();
@@ -30,48 +30,47 @@ public class Application extends Controller{
         rec1= new Receta("Arroz a la cubana", "Freir el huevo y cocer el arroz").save();
 
 
-            //Añadidos nuevos alimentos a la BBDD para que sea mas rápido
-            //File file= new File("documentation/files/AlimentosFile");
-            File file = new File("Verduras/documentation/files/AlimentosFile");
-            FileReader f = new FileReader(file);
-            BufferedReader br = new BufferedReader(f);
-            Alimento aux0;//hay que dejarlo fuera del bucle para que no de error
-            String linea = br.readLine();
-            while (!linea.equals(".")){
-                String campo[] = linea.split(",");
-                aux0 = new Alimento(campo[0], campo[1], campo[2]);
-                log.info(aux0.toString());
-                aux0.save();
-                linea = br.readLine();
-            }
+        //Añadidos nuevos alimentos a la BBDD para que sea mas rápido
+        File file= new File("documentation/files/AlimentosFile");
+        //File file = new File("Verduras/documentation/files/AlimentosFile");
+        FileReader f = new FileReader(file);
+        BufferedReader br = new BufferedReader(f);
+        Alimento aux0;//hay que dejarlo fuera del bucle para que no de error
+        String linea = br.readLine();
+        while (!linea.equals(".")){
+            String campo[] = linea.split(",");
+            aux0 = new Alimento(campo[0], campo[1], campo[2]);
+            log.info(aux0.toString());
+            aux0.save();
+            linea = br.readLine();
+        }
 
-            //Nuevas recetas en la BBDD CON SISTEMA SCANNER
-            Scanner scan = new Scanner(new File("Verduras/documentation/files/RecetasFile"));
-            scan.useDelimiter(Pattern.compile("-----\n"));
-            Receta aux1;
+        //Nuevas recetas en la BBDD CON SISTEMA SCANNER
+        Scanner scan = new Scanner(new File("Verduras/documentation/files/RecetasFile"));
+        scan.useDelimiter(Pattern.compile("-----\n"));
+        Receta aux1;
 
-            while (scan.hasNext()){
-                String line = scan.next();
-                String campo[] = line.split("#");
-                log.info(campo[0]);
-                aux1 = new Receta(campo[0],campo[1]);
-                aux1.save();
-                campo = null;
-            }
-            addIngrediente("Risotto con Jamon\n", "Arroz bomba", "100g");
-            addIngrediente("Risotto con Jamon\n", "Jamon iberico", "2 trozos");
-            addIngrediente("Risotto con Jamon\n","Ajos", "1");
-            addIngrediente("Risotto con Jamon\n","Aceite de oliva", "50ml");
-            addAlimento("Pimiento rojo", "Hortaliza");
-            addAlimento("Arroz blanco", "Cereal");
-            addAlimento("Huevos de gallina", "Huevos");
-            addAlimento("Lomo de salmón", "Pescado");
+        while (scan.hasNext()){
+            String line = scan.next();
+            String campo[] = line.split("#");
+            log.info(campo[0]);
+            aux1 = new Receta(campo[0],campo[1]);
+            aux1.save();
+            campo = null;
+        }
+        addIngrediente("Risotto con Jamon\n", "Arroz bomba", "100g");
+        addIngrediente("Risotto con Jamon\n", "Jamon iberico", "2 trozos");
+        addIngrediente("Risotto con Jamon\n","Ajos", "1");
+        addIngrediente("Risotto con Jamon\n","Aceite de oliva", "50ml");
+        addAlimento("Pimiento rojo", "Hortaliza");
+        addAlimento("Arroz blanco", "Cereal");
+        addAlimento("Huevos de gallina", "Huevos");
+        addAlimento("Lomo de salmón", "Pescado");
 
-            addIngrediente("Arroz a la cubana", "Huevos de gallina", "2");
-            addIngrediente("Arroz a la cubana", "Arroz blanco", "100g");
-            addIngrediente("Lentejas a la aragonesa", "Lentejas pardina", "200g");
-
-            renderText("INICIADA LA BASE DE DATOS");
+        addIngrediente("Arroz a la cubana", "Huevos de gallina", "2");
+        addIngrediente("Arroz a la cubana", "Arroz blanco", "100g");
+        addIngrediente("Lentejas a la aragonesa", "Lentejas pardina", "200g");
+            render();
     }
 
     public void verIngredientes(String nombreReceta) {
@@ -90,7 +89,7 @@ public class Application extends Controller{
     }
 
     public void alimentos(){
-        String h1 = "select nombre from Alimento";
+        String h1 = "select nombre, tipo, vegetariano from Alimento";
         Query query1 = JPA.em().createQuery(h1);
         List<String> listatodos = query1.getResultList();
         renderJSON(listatodos);
@@ -131,4 +130,7 @@ public class Application extends Controller{
 
     }
 
+    public void idb() throws FileNotFoundException{
+
+    }
 }
